@@ -2,7 +2,16 @@
 
 ![main workflow](https://github.com/inouetakuya/vue-nl2br/actions/workflows/main.yml/badge.svg)
 
-A vue component which turns new lines into line breaks.
+A vue component which turns new lines into line breaks. Fixed version.
+
+Original library doesn't work with Webpack 5. Errors:
+WARNING in ./node_modules/vue-nl2br/dist/Nl2br.js 3:24-31
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+WARNING in ./node_modules/vue-nl2br/dist/index.js 6:24-31
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+The problem in UMD module compilation. This issue is fixed in this fork.
+
 
 ## Why not just use CSS?
 
